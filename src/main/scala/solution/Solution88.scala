@@ -20,7 +20,6 @@ object Solution88 {
           if(num >= nums1.findLast(_ != 0).getOrElse(Int.MinValue)){
             nums1(nums1.indexWhere(_ == 0)) = num
           } else {
-            println("ELSE")
             val lastNonZeroIndex = nums1.indexWhere(_ == 0)
             nums1(lastNonZeroIndex) = nums1(lastNonZeroIndex - 1)
             nums1(lastNonZeroIndex - 1) = num
@@ -34,9 +33,6 @@ object Solution88 {
       }
       }
 
-
-//  val a1 = Array(2, 0)
-//  merge(a1, 1, Array(1), 1)
   val a1 = Array(1, 2, 3, 0, 0, 0)
   merge(a1, 3, Array(2, 5, 6), 3)
   println(a1.mkString("Array(", ", ", ")"))
