@@ -3,9 +3,9 @@ package solution
 import scala.annotation.tailrec
 
 object Solution206 {
-  class ListNode(_x: Int = 0, _next: ListNode = null) {
+  class ListNode(_x: java.lang.Integer, _next: ListNode = null) {
     var next: ListNode = _next
-    var x: Int = _x
+    var x: java.lang.Integer = _x
   }
 
   def reverseList(head: ListNode): ListNode = {
@@ -16,6 +16,6 @@ object Solution206 {
       if(next == null) cur else iter(cur, next)
     }
 
-    if(head == null || head.next == null) head else iter(head, head.next)
+    if(head == null || head.next == null) head else iter(null, head)
   }
 }
